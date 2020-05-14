@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -788,12 +787,13 @@
 	<!-- These functions handle the data table -->
 	<script>
 		
-		// update table on tab switch
+		// update table and permalink on tab switch
 		$('.nav-tabs a').on('shown.bs.tab', function(event){
 			var currTab = $(event.target).text();
 			var prevTab = $(event.relatedTarget).text();
 			if (currTab != "About" && prevTab != "About") {
 				updateTable() ;
+				updatePermalink();
 			}
 		});
 		
